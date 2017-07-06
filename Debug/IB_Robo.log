@@ -1,0 +1,78 @@
+﻿生成启动时间为 2017/7/4 11:01:10。
+     1>项目“D:\work\prj\IB_Robo\IB_Robo\IB_Robo.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\prog\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\IB_Robo.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp HistDataRcvMng.cpp
+         HistDataRcvMng.cpp
+     1>d:\work\prj\ib_robo\ib_robo\inc\softdollartier.h(5): warning C4251: “SoftDollarTier::m_name”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“SoftDollarTier”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\softdollartier.h(5): warning C4251: “SoftDollarTier::m_val”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“SoftDollarTier”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\softdollartier.h(5): warning C4251: “SoftDollarTier::m_displayName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“SoftDollarTier”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereaderossignal.h(27): warning C4290: 忽略 C++ 异常规范，但指示函数不是 __declspec(nothrow)
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereader.h(12): warning C4099: “EReaderSignal”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\ereadersignal.h(6) : 参见“EReaderSignal”的声明
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereader.h(20): warning C4251: “EReader::m_msgQueue”: class“std::deque<ibapi::shared_ptr<EMessage>,std::allocator<_Ty>>”需要有 dll 接口由 class“EReader”的客户端使用
+                 with
+                 [
+                     _Ty=ibapi::shared_ptr<EMessage>
+                 ]
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereader.h(22): warning C4251: “EReader::m_buf”: class“std::vector<char,std::allocator<char>>”需要有 dll 接口由 class“EReader”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\util.h(9): warning C4099: “Contract”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\contract.h(70) : 参见“Contract”的声明
+         Client.cpp
+     1>d:\work\prj\ib_robo\ib_robo\inc\softdollartier.h(5): warning C4251: “SoftDollarTier::m_name”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“SoftDollarTier”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\softdollartier.h(5): warning C4251: “SoftDollarTier::m_val”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“SoftDollarTier”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\softdollartier.h(5): warning C4251: “SoftDollarTier::m_displayName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“SoftDollarTier”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereaderossignal.h(27): warning C4290: 忽略 C++ 异常规范，但指示函数不是 __declspec(nothrow)
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereader.h(12): warning C4099: “EReaderSignal”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\ereadersignal.h(6) : 参见“EReaderSignal”的声明
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereader.h(20): warning C4251: “EReader::m_msgQueue”: class“std::deque<ibapi::shared_ptr<EMessage>,std::allocator<_Ty>>”需要有 dll 接口由 class“EReader”的客户端使用
+                 with
+                 [
+                     _Ty=ibapi::shared_ptr<EMessage>
+                 ]
+     1>d:\work\prj\ib_robo\ib_robo\inc\ereader.h(22): warning C4251: “EReader::m_buf”: class“std::vector<char,std::allocator<char>>”需要有 dll 接口由 class“EReader”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\util.h(9): warning C4099: “Contract”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\contract.h(70) : 参见“Contract”的声明
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclient.h(350): warning C4251: “EClient::m_transport”: class“std::auto_ptr<ETransport>”需要有 dll 接口由 class“EClient”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclient.h(353): warning C4251: “EClient::m_inBuffer”: class“std::vector<char,std::allocator<char>>”需要有 dll 接口由 class“EClient”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclient.h(355): warning C4251: “EClient::m_host”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“EClient”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclient.h(365): warning C4251: “EClient::m_TwsTime”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“EClient”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclient.h(368): warning C4251: “EClient::m_optionalCapabilities”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“EClient”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclient.h(370): warning C4251: “EClient::m_connectOptions”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“EClient”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\eclientsocket.h(13): warning C4099: “EReaderSignal”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\ereadersignal.h(6) : 参见“EReaderSignal”的声明
+     1>d:\work\prj\ib_robo\ib_robo\contractsamples.h(5): warning C4099: “Contract”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\contract.h(70) : 参见“Contract”的声明
+     1>d:\work\prj\ib_robo\ib_robo\ordersamples.h(8): warning C4099: “Order”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\order.h(45) : 参见“Order”的声明
+     1>d:\work\prj\ib_robo\ib_robo\inc\executioncondition.h(8): warning C4251: “ExecutionCondition::m_exchange”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“ExecutionCondition”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\executioncondition.h(9): warning C4251: “ExecutionCondition::m_secType”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“ExecutionCondition”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\executioncondition.h(10): warning C4251: “ExecutionCondition::m_symbol”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“ExecutionCondition”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\contractcondition.h(6): warning C4251: “ContractCondition::m_exchange”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“ContractCondition”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\inc\timecondition.h(7): warning C4251: “TimeCondition::m_time”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“TimeCondition”的客户端使用
+     1>d:\work\prj\ib_robo\ib_robo\availablealgoparams.h(7): warning C4099: “Order”: 类型名称以前使用“struct”现在使用的是“class”
+                 d:\work\prj\ib_robo\ib_robo\inc\order.h(45) : 参见“Order”的声明
+     1>d:\work\prj\ib_robo\ib_robo\client.cpp(246): warning C4244: “=”: 从“time_t”转换到“long”，可能丢失数据
+     1>d:\work\prj\ib_robo\ib_robo\client.cpp(104): warning C4101: “errorSet”: 未引用的局部变量
+     1>d:\work\prj\ib_robo\ib_robo\client.cpp(104): warning C4101: “readSet”: 未引用的局部变量
+     1>d:\work\prj\ib_robo\ib_robo\client.cpp(104): warning C4101: “writeSet”: 未引用的局部变量
+     1>d:\work\prj\ib_robo\ib_robo\client.cpp(1213): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\work\prj\ib_robo\ib_robo\client.cpp(1407): warning C4018: “<”: 有符号/无符号不匹配
+         正在生成代码...
+       Link:
+         D:\prog\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\work\prj\IB_Robo\Debug\IB_Robo.exe" /INCREMENTAL /NOLOGO TwsSocketClient.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\work\prj\IB_Robo\Debug\IB_Robo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\work\prj\IB_Robo\Debug\IB_Robo.lib" /MACHINE:X86 Debug\AccountSummaryTags.obj
+         Debug\AvailableAlgoParams.obj
+         Debug\Client.obj
+         Debug\ContractSamples.obj
+         Debug\HistDataRcvMng.obj
+         Debug\IB_Robo.obj
+         Debug\OrderSamples.obj
+         Debug\cmdProcess.obj
+         Debug\ScannerSubscriptionSamples.obj
+         Debug\stdafx.obj
+         Debug\util.obj
+         IB_Robo.vcxproj -> D:\work\prj\IB_Robo\Debug\IB_Robo.exe
+     1>已完成生成项目“D:\work\prj\IB_Robo\IB_Robo\IB_Robo.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.52
