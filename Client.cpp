@@ -425,8 +425,9 @@ bool Client::historicalDataRequests(Contract& cont, const char* queryTime, const
 	setQryFdBk((void*)(&qryfb));
 	//m_pClient->reqHistoricalData(m_reqid, ContractSamples::EurGbpFx(), queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
 	// m_pClient->reqHistoricalData(m_reqid++, cont, queryTime, "3600 S", "1 min", "MIDPOINT", 1, 1, TagValueListSPtr());
-	m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "TRADES", 1, 1, TagValueListSPtr());
-	//m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
+	
+	//m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "TRADES", 1, 1, TagValueListSPtr());
+	m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
 	dwRet = ::WaitForSingleObject(g_evt, waitTime);
 	if (WAIT_OBJECT_0 != dwRet)
 	{

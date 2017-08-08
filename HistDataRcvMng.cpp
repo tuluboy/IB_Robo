@@ -274,7 +274,6 @@ void HistDataUpdateInfo::BuildDataFilePath1()
 		{
 			return;
 		}
-
 	}
 	filepath = fullpath.string();
 
@@ -286,6 +285,10 @@ void HistDataUpdateInfo::BuildDataFilePath1()
 	else if ("STK" == contract.secType)
 	{
 		filepath.append("\\").append(contract.symbol).append("_").append(bs).append(".csv");
+	}
+	else if ("CMDTY" == contract.secType)
+	{
+		filepath.append("\\CMDTY_").append(contract.symbol).append("_").append(bs).append(".csv");
 	}
 
 }

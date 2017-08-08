@@ -59,7 +59,7 @@ void getDate(std::string& inputDate)
 {
 	util::UpdateTime();
 
-	RecieveInput("\query date[like:20170602,use today input 0]:  ", inputDate, [](std::string& in)->bool{ \
+	RecieveInput("\nquery date[like:20170602,use today input 0]:  ", inputDate, [](std::string& in)->bool{ \
 		int len = in.length(); \
 	if (1 == len){ if (in[0] == '0')return true; else return false; } \
 	if (len != 8)return false; \
@@ -76,7 +76,7 @@ void getDate(std::string& inputDate)
 
 void getTime(std::string& inputTime)
 {
-	RecieveInput("\time[like:12:34:56,use 05:15:00 input 0]:  ", inputTime, [](std::string& in)->bool{ \
+	RecieveInput("\nquery time[like:12:34:56,use 05:15:00 input 0]:  ", inputTime, [](std::string& in)->bool{ \
 		int len = in.length(); \
 	if (1 == len){ if (in[0] == '0')return true; else return false; } \
 	if (len != 8)return false;  return true; });
@@ -95,7 +95,7 @@ void getExpire(std::string& expird)
 
 void getSecType(std::string& secType)
 {
-	RecieveInput("\nSecurity type:[like:STK,OPT]: ", secType, [](std::string& in)->bool{int len = in.length(); return 3 == len;	});
+	RecieveInput("\nSecurity type:[like:STK,OPT,CMDTY]: ", secType, [](std::string& in)->bool{return true;	});
 	secType = strToUpperInSitu(secType);
 }
 
@@ -276,7 +276,11 @@ void execute(Client* pClient, const int cmdnum)
 		{
 			hdq->UpdateInfo[0].SetContract(stkid, std::string("SMART"), expiredate, strike, multip, optype);
 		}
-
+		if ("CMDTY" == secType)
+		{
+			hdq->UpdateInfo[0].contract.secType = secType;
+			hdq->UpdateInfo[0].contract.exchange = "GLOBEX";
+		}
 		// 根据交易日列表，每10天一取，循环取完
 		for (;;)
 		{
