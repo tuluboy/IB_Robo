@@ -290,5 +290,12 @@ void HistDataUpdateInfo::BuildDataFilePath1()
 	{
 		filepath.append("\\CMDTY_").append(contract.symbol).append("_").append(bs).append(".csv");
 	}
-
+	else if ("CASH" == contract.secType)
+	{
+		filepath.append("\\CASH_").append(contract.symbol).append(contract.currency).append("_").append(bs).append(".csv");
+	}
+	else if ("FUT" == contract.secType)
+	{
+		filepath.append("\\FUT_").append(contract.symbol).append(contract.lastTradeDateOrContractMonth).append("_").append(bs).append(".csv");
+	}
 }

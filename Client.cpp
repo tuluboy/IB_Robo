@@ -423,15 +423,17 @@ bool Client::historicalDataRequests(Contract& cont, const char* queryTime, const
 	}
 	ResetEvent(g_evt);
 	setQryFdBk((void*)(&qryfb));
+	
+	m_pClient->reqHistoricalData(m_reqid, ContractSamples::XGPCommodity(), queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
 	//m_pClient->reqHistoricalData(m_reqid, ContractSamples::EurGbpFx(), queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
 	// m_pClient->reqHistoricalData(m_reqid++, cont, queryTime, "3600 S", "1 min", "MIDPOINT", 1, 1, TagValueListSPtr());
 	
 	//m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "TRADES", 1, 1, TagValueListSPtr());
-	m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
+	//m_pClient->reqHistoricalData(m_reqid, cont, queryTime, durationStr, barSizeSetting, "MIDPOINT", 1, 1, TagValueListSPtr());
 	dwRet = ::WaitForSingleObject(g_evt, waitTime);
 	if (WAIT_OBJECT_0 != dwRet)
 	{
-		printf("get %s 's histdata failed! please retry sometime ago...\n", cont.secId.c_str());
+		printf("get %s 's histdata failed! please retry sometime ago...\n", cont.symbol.c_str());
 		//sleep(1);
 		resetQryFdBk();
 		m_reqid++;

@@ -8,7 +8,7 @@
 #include <functional>
 #include "HistDataRcvMng.h"
 #include <boost/lexical_cast.hpp>
-
+#include "ContractSamples.h"
 std::thread* pCmdThread = nullptr;
 extern HANDLE g_evt;
 
@@ -257,7 +257,9 @@ void execute(Client* pClient, const int cmdnum)
 		break;
 	case 4:
 		// 取回一个标的可以取到的所有历史数据
+#if 0
 		getSecType(secType);
+
 		getStkId(stkid);
 		if ("OPT" == secType)
 		{
@@ -266,11 +268,22 @@ void execute(Client* pClient, const int cmdnum)
 			getStrike(strike);
 			getMultiplier(multip);
 		}
+		if ("FUT" == secType)
+		{
+			getExpire(expiredate);
+		}
 		getDate(histDataDate); // 获取从哪一天开始的数据，0表示取最近一天，11111111表示取能取到的最久的数据
 		getTime(histDataTime);
 		getHDBarSize(barsize);
 		getHDDuration(duration);
-
+#else
+		secType = "FUT";
+		histDataDate = "20170831";
+		histDataTime = "23:59:59";
+		stkid = "XINA50";
+		barsize = "1 min";
+		duration = "10 D";
+#endif
 		if (!hdq)hdq = new HistDataRcvMng(histDataDate, histDataTime, stkid, barsize, duration, pClient);
 		if ("OPT" == secType)
 		{
@@ -280,6 +293,18 @@ void execute(Client* pClient, const int cmdnum)
 		{
 			hdq->UpdateInfo[0].contract.secType = secType;
 			hdq->UpdateInfo[0].contract.exchange = "GLOBEX";
+			hdq->UpdateInfo[0].contract.exchange = "HKFE";
+		}
+		if ("CASH" == secType)
+		{
+			hdq->UpdateInfo[0].contract.symbol = stkid;
+			hdq->UpdateInfo[0].contract.secType = "CASH";
+			hdq->UpdateInfo[0].contract.currency = "USD";
+			hdq->UpdateInfo[0].contract.exchange = "IDEALPRO";
+		}
+		if ("FUT" == secType)
+		{
+			hdq->UpdateInfo[0].contract = ContractSamples::XGPCommodity();
 		}
 		// 根据交易日列表，每10天一取，循环取完
 		for (;;)

@@ -524,3 +524,17 @@ Contract ContractSamples::MTbroadtapeNewsFeed()
 	//! [newscontractmt]
 	return contract;
 }
+
+// zhangchao
+Contract ContractSamples::XGPCommodity() {
+	//! [commoditycontract]
+	Contract contract;
+	contract.symbol = "XINA50";
+	contract.secType = "FUT";
+	contract.exchange = "SGX";
+	contract.currency = "USD";
+	contract.includeExpired = true;
+	contract.lastTradeDateOrContractMonth = "201708";
+	//! [commoditycontract]
+	return contract;
+}
